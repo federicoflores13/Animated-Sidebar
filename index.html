@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Federico Flores">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"> 
+    <title>Sidebar</title>
+</head>
+<body>
+    
+    <nav id="mainNav">
+        <h3 class="nav-title">Administrator</h3>    
+        <div class="nav-category">General</div>
+        <ul>
+            <li><a href="#" class="sidebar-active"><i class="fa fa-list"></i>DashBoard</a></li>
+            <div class="nav-category">Administration</div>
+            <li><a href="#"><i class="fa fa-users"></i>Users</a></li>
+            <li><a href="#"><i class="fa fa-book"></i>Pages</a></li>
+            <li><a href="#"><i class="fa fa-columns"></i>Posts</a></li>
+            <div class="nav-category">System Settings</div>
+            <li><a href="javascript:void(0)" id="dropBtn"><i class="fa fa-database"></i>Database <span class="nav-caret"></span></a>
+                <ul class="submenu">
+                    <li><a href="#"><i class="fa fa-download"></i>Backup</a></li>
+                    <li><a href="#"><i class="fa fa-trash"></i>drop</a></li>
+                    <li><a href="#"><i class="fa fa-eye"></i>View</a></li>
+                </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-cog"></i>Settings</a></li> 
+         
+        </ul>
+
+        <div class="author">
+            <div>Federico K. Flores Jr.</div>
+            <div>BSIT Student</div>
+        </div>
+
+    </nav>
+
+    <div class="sidebar-btn" id="sidebarBtn">
+        <span class="btn-lines"></span>
+        <span class="btn-lines"></span> 
+        <span class="btn-lines"></span>
+         <div class="menu-cap"><b>Menu</b></div>
+    </div>
+    
+
+    <script src="main.js"></script>
+</body>
+</html>

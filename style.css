@@ -1,0 +1,185 @@
+/* copyright 2019 Federico Flores Jr. */
+@font-face{
+    src: url("fonts/Courgette-Regular.ttf");
+    font-family: courgette;
+}
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*globals*/
+.sidebar-active{
+    font-weight: 600; 
+}
+
+.nav-title{
+    color: white;
+    text-align: center;
+    font-family: courgette;
+}
+
+.nav-caret{
+    float: right;
+}
+
+.fa{
+    margin-right: 6px; 
+}
+
+.nav-category{
+    color: #bbb;
+    font-size: .7em;
+    padding: 10px;
+    font-style: italic;
+}
+/*----*/
+
+#mainNav{
+    display: block;
+    background-color: #222;
+    width: 20%;
+    height: 100%;
+    position: absolute;
+    left: -20%;
+    top: 0;
+    transition: left 300ms ease-in; 
+    overflow-y: auto; 
+}
+
+#mainNav.active{  
+    left: 0;
+}
+
+#mainNav ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+#mainNav ul li a{
+    display: block;
+    padding: 1rem;
+    border-bottom: 1px solid #1a1a1a;
+    text-decoration: none;
+    color: white;
+}
+
+#mainNav ul li a:hover, #mainNav ul li a:focus{
+    font-weight: 600;
+    background-color: #111;
+}
+
+.sidebar-btn{
+    overflow: hidden;
+    padding: 7px 5px;
+    position: absolute;
+    top: 0;
+    left: .7rem;
+    transition: left 300ms ease-in;
+}
+
+.sidebar-btn.active{
+    left: 21%;
+}
+
+.btn-lines{
+    transition: all 400ms linear;  
+}
+
+.btn-lines:nth-child(1).close{
+    transform: rotate(405deg) translate(4px, 4px); 
+}
+
+.btn-lines:nth-child(2).close{
+    opacity: 0; 
+}
+
+.btn-lines:nth-child(3).close{
+    transform: rotate(-405deg)  translate(4px, -5px);  
+}
+
+.sidebar-btn:hover{
+    cursor: pointer;
+    color: #33aaee;
+}
+
+.sidebar-btn span{
+    display: block;
+    height: 2px;
+    background-color: #666; 
+    margin: 4px 0;
+    width: 50%;
+}
+
+/*submenu*/
+.submenu{
+    display: none; 
+    background-color: #111;
+}
+
+.submenu li a{
+    font-size: .8rem; 
+    padding-left: 1.8rem !important;
+}
+
+.submenu.toggle{
+    display: block;
+}
+
+.nav-caret:before{
+    content: "\25C2"; 
+}
+
+.nav-caret.toggle:before{
+    content: "\25BE";
+}
+
+.author{
+    position: absolute;
+    color: #aaa;
+    font-size: .7rem;
+    text-align: center;
+    width: 100%;
+    margin-top: 5rem; 
+    padding: 3rem 0;
+}
+
+
+@media only screen and (max-width: 800px){
+    #mainNav{
+        width: 35%;
+        left: -35%;
+    }
+
+    .sidebar-btn.active{
+        left: 36%;
+    }
+
+} 
+
+@media only screen and (max-width: 400px){
+    #mainNav{
+        width: 45%;
+        left: -45%;
+    } 
+
+    .sidebar-btn.active{
+        left: 46%;
+    }
+
+    .nav-title{
+        font-size: 1rem;
+    }
+
+    #mainNav ul li a{
+        font-size: .6rem; 
+    }
+
+} 
